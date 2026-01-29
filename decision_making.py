@@ -112,11 +112,11 @@ print("p is greater") if p > q else print("q is greater")
 # 9️⃣ DECISION MAKING WITH INPUT (EXAMPLE)
 # =========================================
 
-# user_age = int(input("Enter age: "))
-# if user_age >= 18:
-#     print("Adult")
-# else:
-#     print("Minor")
+user_age = int(input("Enter age: "))
+if user_age >= 18:
+    print("Vote")
+else:
+    print("Not elibgible")
 # Output depends on user input
 
 
