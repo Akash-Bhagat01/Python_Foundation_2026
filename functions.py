@@ -48,10 +48,8 @@ def power(base, exp=2):
     return base ** exp
 
 print("Power:", power(5))
-# Output: Power: 25
 
 print("Power:", power(5, 3))
-# Output: Power: 125
 
 
 # -----------------------------------------------------
@@ -71,7 +69,7 @@ student(age=21, name="Rahul")
 # 7. VARIABLE LENGTH ARGUMENTS (*args)
 # -----------------------------------------------------
 def total_sum(*numbers):
-    print("Sum:", sum(numbers))
+    print("Sum:", min(numbers))
 
 total_sum(10, 20, 30, 40)
 # Output: Sum: 100
@@ -94,20 +92,20 @@ employee(name="Amit", role="Developer", salary=50000)
 # -----------------------------------------------------
 # 9. FUNCTION INSIDE FUNCTION (NESTED FUNCTION)
 # -----------------------------------------------------
-def outer():
-    def inner():
-        print("Inside Inner Function")
-    inner()
+def parent():
+    def child():
+        print("Inside child Function")
+    child()
 
-outer()
+parent()
 # Output: Inside Inner Function
 
 
 # -----------------------------------------------------
 # 10. LAMBDA FUNCTION
 # -----------------------------------------------------
-square = lambda x: x * x
-print("Square:", square(6))
+square = lambda x,y: x * x
+print("Square:", square(6,2))
 # Output: Square: 36
 
 
