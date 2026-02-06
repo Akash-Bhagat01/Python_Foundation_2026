@@ -1,0 +1,51 @@
+CREATE TABLE students (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    full_name VARCHAR(100),
+    mobile VARCHAR(15),
+    dob DATE,
+    course VARCHAR(100),
+    address TEXT,
+    gender VARCHAR(10),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+ALTER TABLE students
+ADD email VARCHAR(100) AFTER mobile;
+
+ALTER TABLE students
+MODIFY mobile VARCHAR(20);
+
+ALTER TABLE students
+CHANGE full_name student_name VARCHAR(120);
+
+ALTER TABLE students
+DROP gender;
+
+
+
+INSERT INTO `students`( `full_name`, `mobile`, `dob`, `course`, `address`, `gender`) VALUES('Akash Bhagat','9011770052','1997-02-20','MCA',"Hanuman Peth Nanded","MALE")
+
+INSERT INTO students 
+(full_name, mobile, dob, course, address, gender)
+VALUES
+('Rahul Patil', '9123456780', '1999-08-20', 'BCA', 'Pune', 'Male'),
+('Sneha Deshmukh', '9988776655', '2001-02-10', 'MCA', 'Nagpur', 'Female');
+
+SELECT * FROM students;
+SELECT full_name, course FROM students WHERE gender = 'Female';
+
+
+
+UPDATE students
+SET 
+    mobile = '9999999999',
+    course = 'MBA'
+WHERE id = 1;
+
+UPDATE students
+SET course = 'BCA';
+
+DELETE FROM students WHERE id = 3;
+
+DELETE FROM students;
