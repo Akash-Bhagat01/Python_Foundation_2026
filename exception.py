@@ -2,8 +2,16 @@
 # PYTHON EXCEPTION HANDLING - COMPLETE SINGLE FILE
 # ==================================================
 
-print("\n🚀 Python Exception Handling Demo Started\n")
 
+print("\n🚀 Python Exception Handling Demo Started\n")
+# This is the most common Python exception handling pattern used in real projects:
+try:
+    x = 10 / 0
+except Exception as e:
+    print("Type:", type(e))
+    print("Message:", e)
+    
+ 
 # --------------------------------------------------
 # 1️⃣ Basic try-except
 # --------------------------------------------------
@@ -73,7 +81,7 @@ except IndexError:
 print("\n KeyError handling")
 user = {"name": "Akash"}
 try:
-    print(user["age"])
+    print(user["Name"])
 except KeyError:
     print("Error: Key not found")
 
