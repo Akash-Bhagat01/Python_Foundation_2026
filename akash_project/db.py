@@ -6,4 +6,4 @@ def get_connection():
         password="",      # change if needed
         database="student_db"
     )
-#pip install mysql-connector-python
+#pip  install mysql-connector-python

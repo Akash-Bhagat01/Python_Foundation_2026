@@ -87,7 +87,7 @@ def delete_student():
 # ------------------ BUTTONS ------------------
 btn_frame = tk.Frame(root)
 btn_frame.pack(pady=5)
-
+-
 tk.Button(btn_frame, text="➕ Add Student", width=15, command=add_student).grid(row=0, column=0, padx=10)
 tk.Button(btn_frame, text="✏ Edit Student", width=15, command=edit_student).grid(row=0, column=1, padx=10)
 tk.Button(btn_frame, text="🗑 Delete Student", width=15, command=delete_student).grid(row=0, column=2, padx=10)

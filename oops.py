@@ -127,10 +127,14 @@ class Dog(Animal):
     def bark(self):
         print("Dog barks")
 
-d = Dog()
+class Cat(Dog):
+    def meow(self):
+        print("Cat Meow")
+d = Cat()
 d.speak()
 # Output: Animal speaks
 d.bark()
+d.meow()
 # Output: Dog barks
 
 
@@ -154,14 +158,20 @@ c.show()
 # 12. ENCAPSULATION (PRIVATE VARIABLE)
 # -----------------------------------------------------
 class Bank:
+    
     def __init__(self, balance):
         self.__balance = balance
 
     def get_balance(self):
         return self.__balance
+    def credit_balance(self,amt):
+        self.__balance+=amt
+        return self.__balance
 
 b = Bank(10000)
 print(b.get_balance())
+print(b.credit_balance())
+
 # Output: 10000
 # print(b.__balance)  ❌ Error (private)
 
@@ -172,17 +182,13 @@ print(b.get_balance())
 class Bird:
     def fly(self):
         print("Bird can fly")
-
 class Sparrow(Bird):
     def fly(self):
         print("Sparrow flies")
-
 class Penguin(Bird):
     def fly(self):
         print("Penguin cannot fly")
-
 birds = [Sparrow(), Penguin()]
-
 for bird in birds:
     bird.fly()
 
