@@ -1,4 +1,21 @@
 # pip install mysql-connector-python
+
+'''
+CREATE DATABASE company;
+
+USE company;
+
+CREATE TABLE employees (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100),
+    email VARCHAR(100),
+    mobile VARCHAR(15),
+    department VARCHAR(50),
+    salary DECIMAL(10,2),
+    city VARCHAR(50)
+);
+
+'''
 import mysql.connector
 from mysql.connector import Error
 
