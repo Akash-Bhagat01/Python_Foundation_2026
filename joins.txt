@@ -35,6 +35,11 @@ VALUES
 ('John', NULL, 35000);
 
 
+INSERT INTO projects (project_name, employee_id) VALUES
+('Billing System', 1),
+('CRM System', 2),
+('School Management', 3),
+('Inventory System', 4);
 --------------------------
 INNER JOIN returns only records that have a match in both tables.
 ----------------------------
